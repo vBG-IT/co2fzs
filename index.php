@@ -21,7 +21,7 @@ session_start();
 
 // Benutzersession laden
 $USER = $_SESSION['user'];
-//$USER = NULL;
+$USER = 1;
 
 // Aktivität laden
 $ACTION_PAGE = $_GET['p'];
@@ -31,6 +31,7 @@ $ACTION_SEC = $_GET['sec'];
 // Ist der Benutzer angemeldet?
 if(!empty($USER)) {
 
+  /*
 	$statement = $PDO->prepare("SELECT * FROM user WHERE ID = ?");
 	$statement->execute([$USER]);
 	$result = $statement->fetch();
@@ -44,12 +45,13 @@ if(!empty($USER)) {
 	if($USER_INFO['name'] == '') {
 		$USER_INFO['name'] = 'user:'.$USER_INFO['id'];
 	}
+  */
 
 	if(!empty($ACTION_PAGE)) {
-		include("web/app/page.php");
+		include("app/page.php");
 	}
 	elseif(!empty($ACTION_DO)) {
-		include("web/app/do.php");
+		include("app/do.php");
 	}
 	else {
 		header("Location: ?p=main");
@@ -58,12 +60,10 @@ if(!empty($USER)) {
 }
 else {
 	if(!empty($ACTION_SEC)) {
-		include("web/app/sec.php");
+		include("app/sec.php");
 	}
 	else {
 		header("Location: ?sec=login");
 		exit();
 	}
 }
-
-echo 'Hallo Welt';
