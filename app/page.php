@@ -1,3 +1,26 @@
+<?php
+include("./db-conn.php");
+?>
+<?php
+$id = 1;
+
+$usr = $db->prepare("SELECT * FROM users WHERE id = :id");
+$usr->bindParam(':id', $id); //TODO: $_SESSION["user"] als Parameter einfügen
+$usr->execute();
+$usr_obj = $usr->fetchObject();
+$VORNAME = $usr_obj->vorname;
+$NACHNAME = $usr_obj->nachname;
+
+$seite = $_GET["p"];
+
+if(!isset($seite)) {
+	header("Location: index.php?p=main");
+	exit();
+}
+
+$page = $seite.".php";
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 
