@@ -208,7 +208,7 @@ $page = "page_".$seite.".php";
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <?php include($page); ?>
+                <?php include(validPath($ACTION_PAGE)); ?>
             </div>
             <!-- /.container-fluid -->
         </div>
