@@ -142,13 +142,34 @@
                                     <a href="index.php?p=schule-team">Beste Teams</a>
                                 </li>
                                 <li>
+                                    <a href="index.php?p=beste-schulen">Beste Teams</a>
+                                </li>
+                                <li>
                                     <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-info fa-fw"></i>Informationen<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?p=nutzer-melden">Nutzer melden</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=ueberischt-abzeichen">Abzeichen Übersicht</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=info-support">Support</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=info-broadcast">Broadcast</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                         <li class="sidebar-search">
-                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese 2017</a>
+                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese und <a href="http://kekdestages.de" target="_blank">&copy; kekdestages.de Jonas Barfknecht 2017</a>
                         </li>
                     </ul>
                 </div>
