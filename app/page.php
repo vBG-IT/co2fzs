@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -49,9 +50,10 @@
 
     <!-- Chart -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>  
 
     <!-- Custom CSS -->
     <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
@@ -142,13 +144,34 @@
                                     <a href="index.php?p=schule-team">Beste Teams</a>
                                 </li>
                                 <li>
+                                    <a href="index.php?p=beste-schulen">Beste Schulen</a>
+                                </li>
+                                <li>
                                     <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        <li>
+                            <a href="#"><i class="fa fa-info fa-fw"></i>Informationen<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?p=nutzer-melden">Nutzer melden</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=ueberischt-abzeichen">Abzeichen Übersicht</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=info-support">Support</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?p=info-broadcast">Broadcast</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                         <li class="sidebar-search">
-                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese 2017</a>
+                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese und <a href="http://kekdestages.de" target="_blank">&copy; kekdestages.de Jonas Barfknecht 2017</a>
                         </li>
                     </ul>
                 </div>
@@ -160,7 +183,7 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <?php include($page); ?>
+                <?php include(validPath($ACTION_PAGE)); ?>
             </div>
             <!-- /.container-fluid -->
         </div>
