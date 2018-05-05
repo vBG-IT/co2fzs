@@ -1,3 +1,9 @@
+<?php
+$statement = $PDO->prepare("SELECT * FROM user WHERE name_first LIKE ? AND name_last LIKE ?")
+$statement = $PDO->execute(["Jonas"], ["Barfknecht"]);
+$statement->fetchAll();
+?>
+
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">

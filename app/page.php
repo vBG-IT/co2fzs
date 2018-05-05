@@ -1,28 +1,3 @@
-<?php
-include("./db-conn.php");
-?>
-<?php
-$id = 1;
-$_SESSION["ID"] = $id;
-
-$PDO = $db->prepare("SELECT * FROM users WHERE id = :id");
-$PDO->bindParam(':id', $id); //TODO: $_SESSION["user"] als Parameter einfügen
-$PDO->execute();
-if($PDO->rowCount() == 1){
-    $usr_obj = $usr->fetchObject();
-    $VORNAME = $usr_obj->vorname;
-    $NACHNAME = $usr_obj->nachname;
-}
-
-$seite = $_GET["p"];
-
-if(!isset($seite)) {
-	header("Location: index.php?p=main");
-	exit();
-}
-
-$page = "page_".$seite.".php";
-?>
 
 <!DOCTYPE html>
 <html lang="de">
@@ -169,7 +144,7 @@ $page = "page_".$seite.".php";
                                     <a href="index.php?p=schule-team">Beste Teams</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=beste-schulen">Beste Schule</a>
+                                    <a href="index.php?p=beste-schulen">Beste Schulen</a>
                                 </li>
                                 <li>
                                     <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
