@@ -117,13 +117,13 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i> Ich<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.php?p=teilnehmer&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
+                                    <a href="index.php?p=user&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
                                 </li>
                                 <li>
                                     <a href="index.php?p=uebersicht">Übersicht</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=einstellungen">Einstellungen</a>
+                                    <a href="index.php?p=settings">Einstellungen</a>
                                 </li>
                                 <li>
                                     <a href="intro.php">Regeln</a>
@@ -135,7 +135,7 @@
                             <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Ranglisten<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.php?p=team&id=<?php echo $TEAM; ?>">Mein Team</a>
+                                    <a href="index.php?p=user&id=<?php echo $TEAM; ?>">Mein Team</a>
                                 </li>
                                 <li>
                                     <a href="index.php?p=schule-teilnehmer">Beste Teilnehmer</a>
@@ -183,7 +183,7 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                <?php include(validPath($ACTION_PAGE)); ?>
+                <?php include("page_".validPath($ACTION_PAGE).".php"); ?>
             </div>
             <!-- /.container-fluid -->
         </div>
