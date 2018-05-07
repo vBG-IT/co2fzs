@@ -15,6 +15,7 @@ catch(PDOException $e) {
 
 require('app/lib_random-token.php');
 require('app/lib_valid-path.php');
+require('app/lib_calculate-points.php');
 
 // Session beginnen
 session_start();
