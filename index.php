@@ -22,9 +22,10 @@ session_start();
 
 // Benutzersession laden
 $USER = $_SESSION['user'];
-$USER = 1;
+//$USER = 1;
 
 // Aktivität laden
+$ACTION_MENU = $_GET['m'];
 $ACTION_PAGE = $_GET['p'];
 $ACTION_DO = $_GET['do'];
 $ACTION_SEC = $_GET['sec'];
@@ -120,14 +121,17 @@ if(!empty($USER)) {
     ]
 	];
 
-	if(!empty($ACTION_PAGE)) {
+  if(!empty($ACTION_MENU)) {
+		include("app/menu.php");
+	}
+	elseif(!empty($ACTION_PAGE)) {
 		include("app/page.php");
 	}
 	elseif(!empty($ACTION_DO)) {
 		include("app/do.php");
 	}
 	else {
-		header("Location: ?p=main");
+		header("Location: ?m=main");
 		exit();
 	}
 }
@@ -135,8 +139,11 @@ else {
 	if(!empty($ACTION_SEC)) {
 		include("app/sec.php");
 	}
+  elseif(!empty($ACTION_PAGE)) {
+		include("app/page.php");
+	}
 	else {
-		header("Location: ?sec=login");
+		header("Location: ?p=main");
 		exit();
 	}
 }
