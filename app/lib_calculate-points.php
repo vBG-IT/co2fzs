@@ -20,4 +20,5 @@ function calculatePoints($distance, $transport) {
     else {
       return 0;
     }
+  }
 }
