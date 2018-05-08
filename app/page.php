@@ -55,6 +55,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>  
 
+    <!-- Date Picker -->
+    <link href="./dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <script src="./dist/js/bootstrap-datetimepicker.min.js"></script>
+
     <!-- Custom CSS -->
     <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
 
@@ -93,7 +97,7 @@
                     <span></span>
                 </li>
                 <li>
-                    <?php echo $VORNAME." ".$NACHNAME; ?>
+                    <?php echo $result_user["name_first"]." ".$result_user["name_last"]; ?>
                 </li>
                 <li>
                     <a href="sec-logout.php?info=logout">
@@ -106,9 +110,9 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
-                            Team: <?php echo $TEAM; ?><br>
-                            Streckendistanz: <?php echo $DISTANZ; ?>km<br>
-                            Punkte: <?php echo $PUNKTE; ?>
+                            Team: <?php echo $USER_INFO["class"]["name"]; ?><br>
+                            Streckendistanz: <?php echo $USER_INFO["default_distance"]; ?>km<br>
+                            Punkte: <?php echo $USER_INFO[""]; ?>
                         </li>
                         <li>
                             <a href="index.php?p=main"><i class="fa fa-home fa-fw"></i> Start</a>
