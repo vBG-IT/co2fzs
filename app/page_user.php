@@ -1,33 +1,28 @@
 <?php
-$user_statement = $PDO->prepare("SELECT * FROM user WHERE ID = :id");
-$user_statement->bindParam(':id', $USER); //USER ID
-$user_statement->execute();
-
-$user_o = $user_statement->fetchObject();
-$FIRSTNAME = $user_o->name_first;
-$LASTNAME = $user_o->name_last;
-$TEAM = $user_o->class;
-$DISTANCE = $user_o->default_distance;
-$USERNAME = $user_o->username;
+//User Variables
+$firstname = $result_user["name_first"];
+$lastname = $result_user["name_last"];
+$username = $result_user["username"];
+$distance = $result_user["default_distance"];
 
 $track_statement = $PDO->prepare("SELECT * FROM track WHERE user = :user");
-$track_statement->bindParam('user', $USERNAME);
+$track_statement->bindParam('user', $username);
 $track_statement->execute();
 
-$POINTS = 0;
-$DISTANCE_CYCLE = 0;
-$DISTANCE_FOOT = 0;
-$DISTANCE_PUBLIC = 0;
+$points = 0;
+$distance_cycle = 0;
+$distance_foot = 0;
+$distance_public = 0;
 foreach ($track_statement as $row) { 
-	 $POINTS += calculatePoints($row["distance"], $row["transport"]);
+	 $points += calculatePoints($row["distance"], $row["transport"]);
 
 	 if($row["transport"] == 'foot'){
-		$DISTANCE_FOOT += $row["distance"];
+		$distance_foot += $row["distance"];
 	}elseif ($row["transport"] == 'cycle') {
-		$DISTANCE_CYCLE += $row["distance"];
+		$distance_cycle += $row["distance"];
 	}
 	elseif ($row["transport"] == 'public') {
-		$DISTANCE_PUBLIC += $row["distance"];
+		$distance_public += $row["distance"];
 	}
 }
 
@@ -36,7 +31,7 @@ foreach ($track_statement as $row) {
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
-            <?php echo $FIRSTNAME." ".$LASTNAME?>
+            <?php echo $firstname." ".$lastname?>
         </h1>
 	</div>
 </div>
@@ -64,7 +59,7 @@ foreach ($track_statement as $row) {
 				"#d9534f"
 			],
 			data: [
-				{label: "Gar nicht/Anderes Verkehrsmittel", value: <?php echo $DISTANCE_CYCLE?>},
+				{label: "Gar nicht/Anderes Verkehrsmittel", value: <?php echo $distance_cycle?>},
 				{label: "Zu Fuß", value: <?php?>},
 				{label: "Mit dem Rad", value: <?php?>},
 				{label: "Per ÖPNV", value: <?php?>}
@@ -82,13 +77,13 @@ foreach ($track_statement as $row) {
 				<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover">
 						<tbody>
-							<tr><th>Team</th><td><a href="index.php?p=team&id=<?php echo $TEAM; ?>"><?php echo $TEAM; ?></a></td></tr>
-							<tr><th>Schule</th><td><a href="index.php?p=schule&id=<?php echo $SCHOOL; ?>"><?php echo $SCHOOL; ?></a></td></tr>
-							<tr><th>Punkte</th><td><?php echo $POINTS ?></td></tr>
-							<tr><th>Schulweglänge</th><td><?php echo $DISTANCE; ?>km</td></tr>
-							<tr><th>Distanz zu Fuß</th><td><?php echo $DISTANCE_FOOT; ?>km</td></tr>
-							<tr><th>Distanz mit dem Rad</th><td><?php echo $DISTANCE_CYCLE; ?>km</td></tr>
-							<tr><th>Distanz per ÖPNV</th><td><?php echo $DISTANCE_PUBLIC; ?>km</td></tr>
+							<tr><th>Team</th><td><a href="index.php?p=team&id=<?php echo $USER_INFO["class"]["name"]; ?>"><?php echo $USER_INFO["class"]["name"]; ?></a></td></tr>
+							<tr><th>Schule</th><td><a href="index.php?p=schule&id=<?php echo $USER_INFO["school"]["name"]; ?>"><?php echo $USER_INFO["school"]["name"]; ?></a></td></tr>
+							<tr><th>Punkte</th><td><?php echo $points ?></td></tr>
+							<tr><th>Schulweglänge</th><td><?php echo $distance; ?>km</td></tr>
+							<tr><th>Distanz zu Fuß</th><td><?php echo $distance_foot; ?>km</td></tr>
+							<tr><th>Distanz mit dem Rad</th><td><?php echo $distance_cycle; ?>km</td></tr>
+							<tr><th>Distanz per ÖPNV</th><td><?php echo $distance_public; ?>km</td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -119,9 +114,6 @@ foreach ($track_statement as $row) {
                 		</thead>
 						<tbody>
 <?php
-foreach(){ //NOCH KEINE TAGE DEFINIERT
-
-}
 
 ?>
 						</tbody>
