@@ -1,5 +1,6 @@
 <?php
-if(!empty($_GET['class'])) {
+
+/* if(!empty($_GET['class'])) {
 ?>
 <form action="?sec=do-register-staff" method="POST">
   <input type="hidden" name="class" value="<?php echo $_GET['class']; ?>" />
@@ -27,12 +28,13 @@ elseif (!empty($_GET['contest'])) {
   }
 }
 else {
+  echo 'Wähle den Wettbewerb:';
   $statement = $PDO->prepare("SELECT * FROM contest ORDER BY name");
   $statement->execute();
   foreach ($statement->fetchAll() as $row) {
-    echo '<a href="'.$row['ID'].'">'.$row['name'].'</a><br />';
+    echo '<a href="?sec=register&contest='.$row['ID'].'">'.$row['name'].'</a><br />';
   }
-}
+}*/
 ?>
 <a href="?sec=register-staff">Als Mitarbeiter registrieren</a><br />
 <a href="?sec=login">Anmelden</a><br />

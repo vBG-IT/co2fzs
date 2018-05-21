@@ -1,13 +1,14 @@
 <?php
 
 $username = $_POST['username'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$password = $_POST['password'];
 
 $statement = $PDO->prepare("SELECT * FROM user WHERE username = ?");
 $statement->execute([$username]);
-if($statement->rowCount() == 1) {
-  $result = $statement->fetch();
-  if($password == $result['password']) {
+$result = $statement->fetchAll();
+if(count($result) == 1) {
+  $result = $result[0];
+  if(password_verify($password, $result['password'])) {
     $_SESSION['user'] = $result['ID'];
     header("Location: ?m=main");
     exit();

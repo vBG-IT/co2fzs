@@ -6,7 +6,7 @@ if(empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'off') {
 }
 
 try {
-	$PDO = new PDO('sqlite:data/db.sqlite');
+	$PDO = new PDO('sqlite:' . __DIR__ . DIRECTORY_SEPARATOR . 'data/db.sqlite');
 	$PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e) {

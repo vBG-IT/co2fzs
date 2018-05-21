@@ -96,7 +96,7 @@
                     <?php echo $VORNAME." ".$NACHNAME; ?>
                 </li>
                 <li>
-                    <a href="sec-logout.php?info=logout">
+                    <a href="?do=logout">
                         Abmelden
                     </a>
                 </li>
