@@ -83,8 +83,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-icon" href="index.php?p=main"><img class="navbar-icon" src="./media/logo50x50.png" alt="CO&#8322;-frei zur Schule"></a>
-                <a class="navbar-brand" href="index.php?p=main">CO&#8322;-frei zur Schule</a>
+                <a class="navbar-icon" href="?m=main"><img class="navbar-icon" src="./media/logo50x50.png" alt="CO&#8322;-frei zur Schule"></a>
+                <a class="navbar-brand" href="?m=main">CO&#8322;-frei zur Schule</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -111,19 +111,19 @@
                             Punkte: <?php echo $PUNKTE; ?>
                         </li>
                         <li>
-                            <a href="index.php?p=main"><i class="fa fa-home fa-fw"></i> Start</a>
+                            <a href="?m=main"><i class="fa fa-home fa-fw"></i> Start</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i> Ich<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.php?p=user&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
+                                    <a href="?m=user&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=uebersicht">Übersicht</a>
+                                    <a href="?m=uebersicht">Übersicht</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=settings">Einstellungen</a>
+                                    <a href="?m=settings">Einstellungen</a>
                                 </li>
                                 <li>
                                     <a href="intro.php">Regeln</a>
@@ -135,16 +135,16 @@
                             <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Ranglisten<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.php?p=user&id=<?php echo $TEAM; ?>">Mein Team</a>
+                                    <a href="?m=user&id=<?php echo $TEAM; ?>">Mein Team</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=schule-teilnehmer">Beste Teilnehmer</a>
+                                    <a href="?m=schule-teilnehmer">Beste Teilnehmer</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=schule-team">Beste Teams</a>
+                                    <a href="?m=schule-team">Beste Teams</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=beste-schulen">Beste Schulen</a>
+                                    <a href="?m=beste-schulen">Beste Schulen</a>
                                 </li>
                                 <li>
                                     <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
@@ -156,16 +156,16 @@
                             <a href="#"><i class="fa fa-info fa-fw"></i>Informationen<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.php?p=nutzer-melden">Nutzer melden</a>
+                                    <a href="?m=nutzer-melden">Nutzer melden</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=ueberischt-abzeichen">Abzeichen Übersicht</a>
+                                    <a href="?m=ueberischt-abzeichen">Abzeichen Übersicht</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=info-support">Support</a>
+                                    <a href="?m=info-support">Support</a>
                                 </li>
                                 <li>
-                                    <a href="index.php?p=info-broadcast">Broadcast</a>
+                                    <a href="?m=info-broadcast">Broadcast</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
