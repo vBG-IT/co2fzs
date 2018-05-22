@@ -1,0 +1,1 @@
+Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese</a> und <a href="http://kekdestages.de" target="_blank">&copy; kekdestages.de Jonas Barfknecht</a> 2017-2018

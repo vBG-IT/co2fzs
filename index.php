@@ -10,7 +10,7 @@ try {
 	$PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e) {
-    echo "DB connection failed: " . $e->getMessage();
+    echo "Datenbankverbindung fehlgeschlagen: " . $e->getMessage();
 }
 
 require('app/lib_random-token.php');

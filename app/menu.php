@@ -171,7 +171,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li class="sidebar-search">
-                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese und <a href="http://kekdestages.de" target="_blank">&copy; kekdestages.de Jonas Barfknecht 2017</a>
+                            <?php include("app/_incl_copy.php"); ?>
                         </li>
                     </ul>
                 </div>
