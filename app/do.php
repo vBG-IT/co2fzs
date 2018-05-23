@@ -1,3 +1,3 @@
 <?php
-include("app/do_".validPath($ACTION_DO).".php");
+include("app/do_".$ACTION_DO.".php");
 ?>

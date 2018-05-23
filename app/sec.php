@@ -1,1 +1,1 @@
-<?php include("app/sec_".validPath($ACTION_SEC).".php"); ?>
+<?php include("app/sec_".$ACTION_SEC.".php"); ?>

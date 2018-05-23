@@ -1,1 +1,1 @@
-<a href="?sec=login">Anmelden</a>
+<a href="<?php echo $PATH; ?>/sec/login">Anmelden</a>

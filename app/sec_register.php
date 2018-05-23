@@ -36,5 +36,5 @@ else {
   }
 }*/
 ?>
-<a href="?sec=register-staff">Als Mitarbeiter registrieren</a><br />
-<a href="?sec=login">Anmelden</a><br />
+<a href="<?php echo $PATH; ?>/sec/register-staff">Als Mitarbeiter registrieren</a><br />
+<a href="<?php echo $PATH; ?>/sec/login">Anmelden</a><br />
