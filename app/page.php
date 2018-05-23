@@ -76,7 +76,7 @@
     <!-- End Navbar -->
     <div class="wrapper">
       <div class="page-header clear-filter" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('<?php echo $REL_PATH; ?>assets/img/wald-1.jpg');">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('<?php echo $REL_PATH; ?>assets/img/wald-2.jpg');">
       </div>
       <div class="container">
         <div class="content-center brand">

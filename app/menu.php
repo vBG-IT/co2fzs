@@ -93,7 +93,7 @@
                     <span></span>
                 </li>
                 <li>
-                    <?php echo $VORNAME." ".$NACHNAME; ?>
+                    <?php echo $USER_INFO['name']['first']." ".$USER_INFO['name']['last']; ?>
                 </li>
                 <li>
                     <a href="<?php echo $PATH; ?>/do/logout">
@@ -106,9 +106,10 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
-                            Team: <?php echo $TEAM; ?><br>
-                            Streckendistanz: <?php echo $DISTANZ; ?>km<br>
-                            Punkte: <?php echo $PUNKTE; ?>
+                            Wettbewerb: <?php echo $USER_INFO['contest']['name']; ?><br>
+                            Schule: <?php echo $USER_INFO['school']['name']; ?><br>
+                            Klasse: <?php echo $USER_INFO['class']['name']; ?><br>
+                            Punkte:
                         </li>
                         <li>
                             <a href="<?php echo $PATH; ?>/m/main"><i class="fa fa-home fa-fw"></i> Start</a>
@@ -117,10 +118,10 @@
                             <a href="#"><i class="fa fa-user fa-fw"></i> Ich<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/user&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
+                                    <a href="<?php echo $PATH; ?>/m/user?id=<?php echo $USER_INFO['ID']; ?>">Mein Profil</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/uebersicht">Übersicht</a>
+                                    <a href="<?php echo $PATH; ?>/m/stats">Übersicht</a>
                                 </li>
                                 <li>
                                     <a href="<?php echo $PATH; ?>/m/settings">Einstellungen</a>
@@ -132,19 +133,16 @@
                             <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Ranglisten<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/user&id=<?php echo $TEAM; ?>">Mein Team</a>
+                                    <a href="<?php echo $PATH; ?>/m/classes?id=<?php echo $USER_INFO['ID']; ?>">Meine Klasse</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/schule-teilnehmer">Beste Teilnehmer</a>
+                                    <a href="<?php echo $PATH; ?>/m/users">Beste Teilnehmer</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/schule-team">Beste Teams</a>
+                                    <a href="<?php echo $PATH; ?>/m/classes">Beste Klasses</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/beste-schulen">Beste Schulen</a>
-                                </li>
-                                <li>
-                                    <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
+                                    <a href="<?php echo $PATH; ?>/m/schools">Beste Schulen</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -153,16 +151,16 @@
                             <a href="#"><i class="fa fa-info fa-fw"></i>Informationen<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/nutzer-melden">Nutzer melden</a>
+                                    <a href="<?php echo $PATH; ?>/m/report">Nutzer melden</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/ueberischt-abzeichen">Abzeichen Übersicht</a>
+                                    <a href="<?php echo $PATH; ?>/m/badges">Abzeichen Übersicht</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/info-support">Support</a>
+                                    <a href="<?php echo $PATH; ?>/m/support">Support</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $PATH; ?>/m/info-broadcast">Broadcast</a>
+                                    <a href="<?php echo $PATH; ?>/m/broadcast">Nachrichten</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

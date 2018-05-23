@@ -141,8 +141,10 @@ if(count($path_info) == 2 && $path_info[1] != "") {
     // Alle Informationen zusammenstellen
   	$USER_INFO = [
   		'ID' => $result_user['ID'],
-  		'name_first' => $result_user['name_first'],
-      'name_last' => $result_user['name_last'],
+      'name' => [
+        'first' => $result_user['name_first'],
+        'last' => $result_user['name_last'],
+      ],
       'class' => [
         'ID' => $result_class_user['ID'],
         'name' => $result_class_user['name'],
