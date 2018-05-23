@@ -14,12 +14,12 @@
 
     <!-- Homepage als App-->
         <!-- Allgemein -->
-        <link rel="icon" href="./media/logo50x50.png" />
+        <link rel="icon" href="../../media/logo50x50.png" />
 
         <!-- Apple -->
-        <link rel="apple-touch-icon" href="./media/logo500x500.png" />
-        <link rel="apple-touch-icon-precomposed" href="./media/logo500x500.png" />
-        <link rel="apple-touch-startup-image" href="./media/hintergrund.png">
+        <link rel="apple-touch-icon" href="../../media/logo500x500.png" />
+        <link rel="apple-touch-icon-precomposed" href="../../media/logo500x500.png" />
+        <link rel="apple-touch-startup-image" href="../../media/hintergrund.png">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
         <!-- Microsoft -->
@@ -31,22 +31,22 @@
         <!-- <meta name="msapplication-wide310x150logo" content="images/widelogo.png"> -->
         <!-- <meta name="msapplication-TileColor" content="#FF3300"> -->
         <meta name="msapplication-tooltip" content="CO&#8322;-frei zur Schule - von-Bülow-Gymnasium Neudietendorf">
-        <meta name="msapplication-TileImage" content="./media/logo500x500.png" />
+        <meta name="msapplication-TileImage" content="../../media/logo500x500.png" />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary" />
         <!--<meta name="twitter:site" content="@flickr" />-->
         <meta name="twitter:title" content="CO&#8322;-frei zur Schule" />
         <meta name="twitter:description" content="Mach mit und reduziere deine CO&#8322;-Emmisionen!" />
-        <meta name="twitter:image" content="./media/logo500x500.png" />
+        <meta name="twitter:image" content="../../media/logo500x500.png" />
 
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Chart -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
@@ -56,10 +56,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
     <!-- Custom CSS -->
-    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,7 +83,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-icon" href="?m=main"><img class="navbar-icon" src="./media/logo50x50.png" alt="CO&#8322;-frei zur Schule"></a>
+                <a class="navbar-icon" href="?m=main"><img class="navbar-icon" src="../../media/logo50x50.png" alt="CO&#8322;-frei zur Schule"></a>
                 <a class="navbar-brand" href="?m=main">CO&#8322;-frei zur Schule</a>
             </div>
             <!-- /.navbar-header -->
@@ -195,16 +195,16 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="../../vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="./vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="../../vendor/metisMenu/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="./dist/js/sb-admin-2.js"></script>
+    <script src="../../dist/js/sb-admin-2.js"></script>
 
 </body>
 
