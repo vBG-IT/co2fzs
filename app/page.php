@@ -1,215 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="Clemens" >
-
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo $REL_PATH; ?>assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo $REL_PATH; ?>assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>CO&#8322;-frei zur Schule</title>
-
-    <!-- Homepage als App-->
-        <!-- Allgemein -->
-        <link rel="icon" href="./media/logo50x50.png" />
-
-        <!-- Apple -->
-        <link rel="apple-touch-icon" href="./media/logo500x500.png" />
-        <link rel="apple-touch-icon-precomposed" href="./media/logo500x500.png" />
-        <link rel="apple-touch-startup-image" href="./media/hintergrund.png">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-
-        <!-- Microsoft -->
-        <meta name="application-name" content="CO&#8322;-frei zur Schule">
-        <meta name="msapplication-starturl" content="http://kunstkombinat5.org/clerie/enviro/index.php">
-        <!-- <meta name="msapplication-square150x150logo" content="images/logo.png"> -->
-        <!-- <meta name="msapplication-square310x310logo" content="images/largelogo.png"> -->
-        <!-- <meta name="msapplication-square70x70logo" content="images/tinylogo.png"> -->
-        <!-- <meta name="msapplication-wide310x150logo" content="images/widelogo.png"> -->
-        <!-- <meta name="msapplication-TileColor" content="#FF3300"> -->
-        <meta name="msapplication-tooltip" content="CO&#8322;-frei zur Schule - von-Bülow-Gymnasium Neudietendorf">
-        <meta name="msapplication-TileImage" content="./media/logo500x500.png" />
-
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary" />
-        <!--<meta name="twitter:site" content="@flickr" />-->
-        <meta name="twitter:title" content="CO&#8322;-frei zur Schule" />
-        <meta name="twitter:description" content="Mach mit und reduziere deine CO&#8322;-Emmisionen!" />
-        <meta name="twitter:image" content="./media/logo500x500.png" />
-
-
-
-    <!-- Bootstrap Core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Chart -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>  
-
-    <!-- Date Picker -->
-    <link href="./dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-    <script src="./dist/js/bootstrap-datetimepicker.min.js"></script>
-
-    <!-- Custom CSS -->
-    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="<?php echo $REL_PATH; ?>assets/fonts/Montserrat/Montserrat.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo $REL_PATH; ?>assets/fonts/fontawesome/css/font-awesome.css" />
+    <!-- CSS Files -->
+    <link href="<?php echo $REL_PATH; ?>assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo $REL_PATH; ?>assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
 
 </head>
 
-<body>
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+<body class="index-page sidebar-collapse">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="http://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
+                    Now Ui Kit
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
                 </button>
-                <a class="navbar-icon" href="index.php?p=main"><img class="navbar-icon" src="./media/logo50x50.png" alt="CO&#8322;-frei zur Schule"></a>
-                <a class="navbar-brand" href="index.php?p=main">CO&#8322;-frei zur Schule</a>
             </div>
-            <!-- /.navbar-header -->
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li>
-                    <span></span>
-                </li>
-                <li>
-                    <?php echo $result_user["name_first"]." ".$result_user["name_last"]; ?>
-                </li>
-                <li>
-                    <a href="sec-logout.php?info=logout">
-                        Abmelden
-                    </a>
-                </li>
-            </ul>
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            Team: <?php echo $USER_INFO["class"]["name"]; ?><br>
-                            Streckendistanz: <?php echo $USER_INFO["default_distance"]; ?>km<br>
-                            Punkte: <?php echo $USER_INFO[""]; ?>
-                        </li>
-                        <li>
-                            <a href="index.php?p=main"><i class="fa fa-home fa-fw"></i> Start</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Ich<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?p=user&id=<?php echo $_SESSION["ID"]; ?>">Mein Profil</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=uebersicht">Übersicht</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=settings">Einstellungen</a>
-                                </li>
-                                <li>
-                                    <a href="intro.php">Regeln</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Ranglisten<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?p=user&id=<?php echo $TEAM; ?>">Mein Team</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=schule-teilnehmer">Beste Teilnehmer</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=schule-team">Beste Teams</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=beste-schulen">Beste Schulen</a>
-                                </li>
-                                <li>
-                                    <a href="pdf-rangliste.php">Aktuelle Ranglistenübersicht (PDF)</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-info fa-fw"></i>Informationen<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?p=nutzer-melden">Nutzer melden</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=ueberischt-abzeichen">Abzeichen Übersicht</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=info-support">Support</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?p=info-broadcast">Broadcast</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li class="sidebar-search">
-                            Wettbewerbsverwaltung von <a href="http://milchinsel.de" target="_blank">&copy; milchinsel.de Clemens Riese und <a href="http://kekdestages.de" target="_blank">&copy; kekdestages.de Jonas Barfknecht 2017</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
+                            <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+                            <p>Download</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $REL_PATH; ?>documentation/tutorial-components.html" target="_blank">
+                            <i class="now-ui-icons files_paper"></i>
+                            <p>Components</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-neutral" href="https://www.creative-tim.com/product/now-ui-kit-pro" target="_blank">
+                            <i class="now-ui-icons arrows-1_share-66"></i>
+                            <p>Upgrade to PRO</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <p class="d-lg-none d-xl-none">Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                            <p class="d-lg-none d-xl-none">Instagram</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <!-- /.navbar-static-side -->
-        </nav>
-
-        <!-- Page Content -->
-        <div id="page-wrapper">
-            <div class="container-fluid">
-                <?php include("page_".validPath($ACTION_PAGE).".php"); ?>
-            </div>
-            <!-- /.container-fluid -->
         </div>
-        <!-- /#page-wrapper -->
-
-
-
+    </nav>
+    <!-- End Navbar -->
+    <div class="wrapper">
+      <div class="page-header clear-filter" filter-color="green">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('<?php echo $REL_PATH; ?>assets/img/wald-2.jpg');">
+      </div>
+      <div class="container">
+        <div class="content-center brand">
+          <img class="n-logo" src="<?php echo $REL_PATH; ?>assets/img/now-logo.png" alt="">
+          <h1 class="h1-seo">Now UI Kit.</h1>
+          <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+        </div>
+        <h6 class="category category-absolute">Designed by
+        <a href="http://invisionapp.com/" target="_blank">
+          <img src="<?php echo $REL_PATH; ?>assets/img/invision-white-slim.png" class="invision-logo" />
+        </a>. Coded by
+        <a href="https://www.creative-tim.com" target="_blank">
+          <img src="<?php echo $REL_PATH; ?>assets/img/creative-tim-white-slim2.png" class="creative-tim-logo" />
+        </a>.</h6>
+      </div>
     </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="./vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="./vendor/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="./dist/js/sb-admin-2.js"></script>
-
+    <div class="main">
+      <br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <footer class="footer" data-background-color="black">
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
+                MIT License
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright">
+          &copy;
+          , Designed by
+          <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+          <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
+<!--   Core JS Files   -->
+<script src="<?php echo $REL_PATH; ?>assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="<?php echo $REL_PATH; ?>assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="<?php echo $REL_PATH; ?>assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="<?php echo $REL_PATH; ?>assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="<?php echo $REL_PATH; ?>assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="<?php echo $REL_PATH; ?>assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Share Library etc -->
+<script src="<?php echo $REL_PATH; ?>assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="<?php echo $REL_PATH; ?>assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
 
 </html>
