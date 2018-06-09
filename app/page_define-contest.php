@@ -9,7 +9,7 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <form role="form">
+            <form role="form" action="" method="POST">
                 <div class="form-group">
                     <div class="col-lg-12">
                     <label>Wie soll der Wettbewerb heißen?</label>
@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-lg-6">
                         <label>Wähle ein Startdatum aus!</label>
-                        <input size="16" type="text" class="form-control" id="datetime2" readonly>
+                        <input size="16" type="text" class="form-control" id="datetime2" name="start-time" readonly>
                         <script type="text/javascript">
                             $("#datetime2").datetimepicker({
                                 format: 'yyyy-mm-dd hh:ii',
@@ -26,9 +26,10 @@
                             });
                         </script>     
                     </div>
+
                     <div class="col-lg-6">
                         <label>Wähle ein Enddatum aus!</label>
-                        <input size="16" type="text" class="form-control" id="datetime3" readonly>
+                        <input size="16" type="text" class="form-control" id="datetime3" name="end-time" readonly>
                         <script type="text/javascript">
                             $("#datetime3").datetimepicker({
                                 format: 'yyyy-mm-dd hh:ii',
@@ -37,8 +38,8 @@
                         </script> 
                     </div>
                     <div class="col-lg-12">
-                    <br>
-                        <button type="submit" class="btn btn-lg btn-success btn-block">Wettbewerb erstellen</button>
+                        <br>
+                        <button type="submit" class="btn btn-lg btn-success btn-block" name="login">Wettbewerb erstellen</button>
                     </div>
                 </div>
             </form>
@@ -46,3 +47,20 @@
     </div>
 </div>
 
+<?php
+    if(isset($_POST["login"])){
+        $contest_name = $_POST["contest-name"];
+        $start_time = $_POST["start-time"];
+        $end_time = $_POST["end-time"];
+        
+        $start_time = mktime($start_time);
+        echo "<script>alert(".$contest_name."); </script>";
+        echo "<script>alert(".$start_time."); </script>";
+
+        $statement = $PDO->prepare("INSERT INTO contest (name, day_first, day_last) VALUE (:name, :dayfirst, :daylast)");
+        $statement->bindParam(":name", $contest_name);
+        $statement->bindParam(":dayfirst", $start_time);
+        $statement->bindParam(":daylast", $end_time);
+	    $statement->execute();
+    }
+?>
