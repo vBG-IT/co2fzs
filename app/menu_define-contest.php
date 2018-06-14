@@ -1,66 +1,76 @@
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Starte einen Wettbewerb</h1>
-    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Wettbewerbseinstellungen
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <form role="form" action="" method="POST">
-                <div class="form-group">
-                    <div class="col-lg-12">
-                    <label>Wie soll der Wettbewerb heißen?</label>
-                        <input class="form-control" type="text" name="contest-name" placeholder="KryptonSchule-CO2-frei-2019">
-                        <p class="help-block">Wähle einen einfachen Namen.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <label>Wähle ein Startdatum aus!</label>
-                        <input size="16" type="text" class="form-control" id="datetime2" name="start-time" readonly>
-                        <script type="text/javascript">
-                            $("#datetime2").datetimepicker({
-                                format: 'yyyy-mm-dd hh:ii',
-                                autoclose: true
-                            });
-                        </script>     
-                    </div>
 
-                    <div class="col-lg-6">
-                        <label>Wähle ein Enddatum aus!</label>
-                        <input size="16" type="text" class="form-control" id="datetime3" name="end-time" readonly>
-                        <script type="text/javascript">
-                            $("#datetime3").datetimepicker({
-                                format: 'yyyy-mm-dd hh:ii',
-                                autoclose: true
-                            });
-                        </script> 
-                    </div>
-                    <div class="col-lg-12">
-                        <br>
-                        <button type="submit" class="btn btn-lg btn-success btn-block" name="login">Wettbewerb erstellen</button>
-                    </div>
+<?php
+$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+$length = 10;
+$charactersLength = strlen($characters);
+$randomString = '';
+for ($i = 0; $i < $length; $i++) {
+    $randomString .= $characters[rand(0, $charactersLength - 1)];
+}
+$contestid = $randomString;
+?>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+        <div class="row">
+	        <div class="col-lg-12">
+		        <h1 class="page-header">
+                Wettbewerbseinstellungen
+                </h1>
+	        </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Wettbewerb starten
                 </div>
-            </form>
+                <div class="panel-body">
+                        <form class="form-horizontal" method="post">
+                            <div class="form-group ">
+                                <div class="col-lg-12">
+                                    <h4>Gebe dem Wettbewerb einen Namen</h4>
+                                    <input type="text" class="form-control" aria-label="Name" autofocus placeholder="SuperDuperWettbewerbVomHerrnMöllerNichtGenehmigtWeilDopingErlaubtIstHaHaHa" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div class="col-lg-12">
+                                    <h4>WettbewerbsId</h4>
+                                    <input type="text" disabled class="form-control" aria-label="Id" aria-describedby="inputGroup-sizing-sm" value="<?php echo $randomString; ?>">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4>Wähle ein Startdatum aus.</h4>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar">
+                                            </i>
+                                        </div>
+                                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                                    </div>
+                                    <p class="help-block">Timestamp: </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4>Wähle ein Enddatum aus.</h4>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar">
+                                            </i>
+                                        </div>
+                                        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                                    </div>
+                                    <p class="help-block">Timestamp: </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="StartContest" class="btn btn-success btn-lg btn-block">Starte den Wettbewerb</button> 
+                            </div>
+                        </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <?php
-    if(isset($_POST["login"])){
-        $contest_name = $_POST["contest-name"];
-        $start_time = $_POST["start-time"];
-        $end_time = $_POST["end-time"];
-        
-        $start_time = mktime($start_time);
-        echo "<script>alert(".$contest_name."); </script>";
-        echo "<script>alert(".$start_time."); </script>";
 
-        $statement = $PDO->prepare("INSERT INTO contest (name, day_first, day_last) VALUE (:name, :dayfirst, :daylast)");
-        $statement->bindParam(":name", $contest_name);
-        $statement->bindParam(":dayfirst", $start_time);
-        $statement->bindParam(":daylast", $end_time);
-	    $statement->execute();
-    }
 ?>
+
+
